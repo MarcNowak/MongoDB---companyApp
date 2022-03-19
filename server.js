@@ -16,12 +16,6 @@ mongoClient.connect('mongodb://localhost:27017/', { useNewUrlParser: true, useUn
     const db = client.db('companyDB');
     const app = express();
 
-    db.collection('employees').find({ department: 'IT' }).toArray((err, data) => {
-      if(!err) {
-        console.log(data)
-      }
-    });
-
     app.use(cors());
     app.use(express.json());
     app.use(express.urlencoded({ extended: false }));

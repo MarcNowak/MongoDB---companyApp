@@ -26,11 +26,15 @@ let db = {
       department: 'Testing'
     }
   ],
+
+
   departments: [
     { name: 'IT' },
     { name: 'Marketing' },
     { name: 'Testing' }
   ],
+
+  
   products: [
     {
       name: 'New Wave Festival',
