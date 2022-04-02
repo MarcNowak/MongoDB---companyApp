@@ -38,23 +38,20 @@ describe('Employee', () => {
     }
   });
 
-  if (
-    ('TEST 007 - should throw an error if "lastName" is not a string',
-      () => {
-        const cases = [{}, []];
-        for (let lastName of cases) {
-          const emp = new Employee({
-            firstName: 'John',
-            lastName,
-            department: 'IT',
-          });
+  it('TEST 007 - should throw an error if "lastName" is not a string', () => {
+    const cases = [{}, []];
+    for (let lastName of cases) {
+      const emp = new Employee({
+        firstName: 'John',
+        lastName,
+        department: 'IT',
+      });
 
-          emp.validate((err) => {
-            expect(err.errors).to.exist;
-          });
-        }
-      })
-  );
+      emp.validate((err) => {
+        expect(err.errors).to.exist;
+      });
+    }
+  });
 
   it('TEST 008 - should thorw an error if "department" is not a string', () => {
     const cases = [{}, []];
